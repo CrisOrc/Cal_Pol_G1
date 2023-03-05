@@ -1,4 +1,3 @@
-from prompt_toolkit.layout.containers import Container
 import random as rnd
 import flet as ft
 ########################### BACK ###########################   
@@ -65,6 +64,9 @@ def main(page: ft.Page):
                 Contador=Contador+1
                 if abs((n_1 * x_c) + n_2) <= 0.0001:
                     break
+
+
+
 
     def tanteo():
         n_1=int(n_1F.value)
@@ -145,7 +147,7 @@ def main(page: ft.Page):
     page.bgcolor="#0D0D0D"
     page.horizontal_alignment = "CENTER"
     ddv = ft.Text(value=(""))
-    t = ft.Text(value="Nombre logo", color="white",size=20,)
+    t = ft.Text(value="no pos ", color="white",size=20,)
     n_1F = ft.TextField(border_color="#D99D55", bgcolor="#734C29",width=60, height=30,text_align="CENTER")
     n_2F = ft.TextField(border_color="#D99D55", bgcolor="#734C29",width=60, height=30,text_align="CENTER")
     x_c = 0
@@ -185,4 +187,4 @@ def main(page: ft.Page):
     ),page.update() 
     
 
-ft.app(target=main)
+ft.app(target=main, route_url_strategy="hash")
