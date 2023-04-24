@@ -116,6 +116,7 @@ class App(customtkinter.CTk):
                 x = rnd.randint(-10,10)
                 ox = x
                 x += 0.01
+                Contador=0
 
                 while abs(f(x)) > Tol or Contador == 10000:
 
@@ -136,7 +137,7 @@ class App(customtkinter.CTk):
             
         if met == "Bisección":
             while totS < 100:
-
+                Contador=0
                 ######### Random ##########
                 b = rnd.randint(-10,10)
                 a = rnd.randint(-10,10)
@@ -163,6 +164,7 @@ class App(customtkinter.CTk):
 
         if met == "Regla Falsa":
             while totS < 100:
+                Contador=0
 
                 ######### Random ##########
                 b = rnd.randint(-10,10)
@@ -201,6 +203,7 @@ class App(customtkinter.CTk):
                 return (f(a) - f(b)) / (a - b)
             
             while totS < 100:
+                Contador=0
 
                 ######### Random ##########
                 a = rnd.randint(-10,10)
@@ -239,6 +242,7 @@ class App(customtkinter.CTk):
                 return (f(x + Tol) - f(x)) / Tol
 
             while totS < 100:
+                Contador=0
                 x = rnd.randint(-10,10)
 
                 x1 = x - (f(x)/dxf(x))
@@ -254,6 +258,7 @@ class App(customtkinter.CTk):
 
         if met == "Steffensen":
             while totS < 100:
+                Contador=0
                 x = rnd.randint(-10,10)
 
                 ######### comprobar si es 0 ##########
